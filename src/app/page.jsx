@@ -1,4 +1,6 @@
+import Footer from '@/component/footer'
 import HeroSection from '@/component/heroSection'
+import MyIntro from '@/component/MyIntro'
 import Navbar from '@/component/navbar'
 import ProjectSection from '@/component/project'
 import React from 'react'
@@ -6,9 +8,11 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-     <Navbar/>
+ 
      <HeroSection/>
+     <MyIntro/>
      <ProjectSection/>
+
     </div>
   )
 }

@@ -9,7 +9,7 @@ const projects = [
     title: "Donation Website",
     description:
       "A modern donation platform with secure payment methods and real-time form handling.",
-    image: "/donation.jpg", // Save image in /public/projects
+    image: "/donation.jpg",
     link: "/projects/donation",
   },
   {
@@ -47,15 +47,17 @@ const ProjectSection = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition overflow-hidden"
+              className="bg-white rounded-xl shadow-md transform transition duration-500 hover:scale-105 hover:shadow-2xl group overflow-hidden"
             >
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={500}
-                height={300}
-                className="w-full h-56 object-cover"
-              />
+              <div className="overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  width={500}
+                  height={300}
+                  className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {project.title}
